@@ -1,0 +1,111 @@
+
+*{
+    margin: 0;
+}
+@font-face {
+    font-family: a;
+    src: url(/fonts/Ruwudu/Ruwudu-Medium.ttf);
+    
+}
+@font-face {
+    font-family: b;
+    src: url(/fonts/Cairo/Cairo-VariableFont_slnt\,wght.ttf);
+}
+@font-face{
+    font-family: c;
+    src: url(/fonts/Amiri-Bold.ttf);
+}
+/* ////////////////////////////////////////////////// */
+
+@media (max-width: 600px) {
+    #parent {
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+    }
+    #header, #footer {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    #main {
+        padding: 1rem;
+        font-size: 1rem;
+        line-height: 2;
+    }
+    #main > h1 {
+        margin: 10px;
+        font-size: 1.6rem;
+    }
+}
+body{
+    background-color:rgb(114, 122, 122) ;
+}
+#parent{
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+#parent-1{
+    font-family: c;
+    text-align: center;
+}
+#header {
+    grid-area: header;
+    background-color: #2d3a3a;
+    color: #fff;
+    font-family: a, sans-serif;
+    padding: 1rem;
+    text-align: center;
+
+}
+
+#main {
+    
+    grid-area: main;
+    background-color: #f5f7f7;
+    color: #222;
+    font-family: b, sans-serif;
+    padding: 2rem;
+    overflow-y: auto;
+    text-align: center;
+    line-height: 100px;
+    background-color:rgb(204, 216, 216) ;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+}
+#main > h1 > a{
+    text-decoration: none;
+    color: #2d3a3a;
+    
+}
+#main > h1{
+    height: 100px;
+    width: 300px;
+    background-color: #e6e6e6;
+    box-shadow: 1px 1px 11px 1px rgb(78, 78, 77) ;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    transition: all 200ms ease;
+}
+#h1-hid{
+    background-color:rgb(110, 109, 106) ;
+}
+#main > h1:hover{
+    box-shadow: 1px 1px 11px 5px rgb(78, 78, 77) ;
+}
+#footer {
+    grid-area: footer;
+    background-color: #2d3a3a;
+    color: #fff;
+    font-family: c;
+    text-align: center;
+    padding: 1rem;
+}
